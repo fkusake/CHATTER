@@ -1,0 +1,16 @@
+<main>
+    <div class="login">
+        <form id="userInfo" action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+            <div class="logo">
+                <img src="Chatter.png" alt="">
+            </div>
+            <input type="text" name="user" id="user" placeholder="enter username" required>
+            <div class="file-upload">
+                <label for="fileInput" id="fileLabel">Choose a file</label>
+                <input type="file" id="fileInput" name="imageUrl" hidden>
+            </div>
+            <button type="submit" id="loginBtn">JOIN</button>
+        </form>
+    </div>
+</main>
+<script src="JSpageforLogin.js"></script>

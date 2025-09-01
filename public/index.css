@@ -1,0 +1,539 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* font-size: 20px; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Login Page  */
+.login {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(47, 47, 57);
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#userInfo {
+    width: 20%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(64, 64, 72);
+    margin: auto;
+    border-radius: 0.7em;
+}
+
+#userInfo .logo {
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+#userInfo .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#userInfo #user {
+    width: 70%;
+    height: 15%;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(64, 64, 72);
+}
+
+#user:focus {
+    background-color: white;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+#userInfo button {
+    width: 35%;
+    height: 15%;
+    border-radius: 0.5em;
+    border: none;
+    background-color: rgb(64, 64, 72);
+    color: white;
+    font-weight: bolder;
+}
+#userInfo button:hover{
+    background-color: black;
+}
+
+
+.file-upload {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-upload label {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.5em;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* Main Part */
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    column-gap: 0.5em;
+    background-color: rgb(47, 47, 57);
+}
+
+.mainSecs {
+    height: 100%;
+}
+
+/* Section - 1 Css */
+#sec1 {
+    width: 29%;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 0em 0.5em 0.5em 0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 47, 57);
+
+}
+
+.sec1Div {
+    width: 55%;
+    height: 35%;
+    border-radius: 1em;
+    background-color: white;
+}
+
+.sec1Div img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Section - 2 Css */
+#sec2 {
+    width: 39%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: rgb(47, 47, 57);
+}
+
+/* Section - 3 Css */
+#sec3 {
+    width: 30%;
+}
+
+/* Section - 2 ( Chat Section ) */
+#sec2chatdiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatHeader {
+    height: 11%;
+    background-color: rgb(64, 64, 72);
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chatHeader strong {
+    font-weight: bolder;
+    font-size: 2em;
+    color: gray;
+}
+#chatHeader p{
+    color: gray;
+    font-weight: lighter;
+}
+
+
+
+#chatbody {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(47, 47, 57);
+    border-radius: 0.5em;
+    padding: 0.2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.chatBox.left {
+    display: flex;
+    column-gap: 0.3em;
+    flex-direction: row;
+}
+
+
+.chatBox.right {
+    display: flex;
+    column-gap: 0.3em;
+    flex-direction: row-reverse;
+}
+
+
+/* Avatar */
+.imageDiv {
+    width: 45px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
+}
+
+.imageDiv img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.imageDiv span {
+    color: white;
+    font-size: 0.7em;
+}
+
+/* Message bubble */
+.messageDiv {
+    padding: 0.6em 1em;
+    border-radius: 15px;
+    overflow-wrap: break-word;
+    max-width: 60%;
+    /* never exceed 60% of chat width */
+    min-width: 100px;
+    /* ensures small messages don’t collapse */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Receiver bubble */
+.chatBox.left .messageDiv {
+    border-bottom-left-radius: 0px;
+    background-color: rgb(64, 64, 72);
+}
+
+/* Sender bubble */
+.chatBox.right .messageDiv {
+    border-bottom-right-radius: 0px;
+    background-color: rgb(64, 64, 72);
+}
+
+/* Name */
+.messageDiv h3 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white
+}
+
+/* Message text */
+.messageDiv p {
+    margin: 0.3em 0 0 0;
+    font-size: 0.95rem;
+    color: white
+}
+
+
+
+#chatfooter {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+#chatfooter form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.1em;
+    column-gap: 0.5em;
+}
+
+#textform input {
+    width: 79%;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(64, 64, 72);
+}
+
+#textform input:focus {
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+#textform button {
+    width: 20%;
+    border: none;
+    background-color: rgb(64, 64, 72);
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+}
+
+#textform button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Section -3 Users Info Section */
+#sec3infodiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4em;
+    background-color: rgb(47, 47, 57);
+}
+
+.servicediv {
+    width: 97%;
+    height: 50%;
+    background-color: rgb(47, 47, 57);
+}
+
+#usercountdiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+#countdiv {
+    background-color: rgb(64, 64, 72);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+#countdiv strong {
+    font-weight: bolder;
+    font-size: 2em;
+    color: gray;
+}
+
+#onlineusers {
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.1em;
+}
+
+.usersin {
+    width: 99%;
+    height: 13%;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25);
+    background-color: rgb(64, 64, 72);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.4em;
+}
+
+.usersin strong {
+    font-weight: lighter;
+    font-size: 1.5em;
+    color: white;
+}
+
+.usersin i {
+    color: greenyellow;
+}
+
+/* AI Part */
+#Aidiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.2em;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 0.5em;
+    padding: 0.2em;
+}
+
+#subAidiv {
+    position: relative;
+    width: 95%;
+    height: 95%;
+}
+
+/* AI Question Form */
+#AIForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 0.3em;
+}
+
+#AIForm textarea {
+    width: 98%;
+    height: 85%;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(64, 64, 72);
+    resize: none;
+}
+
+#AIForm textarea:focus {
+    outline: none;
+    border: none;
+    color: white;
+}
+
+#AIForm button {
+    width: 30%;
+    height: 15%;
+    border: none;
+    background-color: rgb(64, 64, 72);
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+}
+
+#AIForm button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* AI output Div */
+#aioutputdiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+    background-color: rgb(47, 47, 57);
+    top: 0;
+    transform: translateX(110%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#aioutputdiv.show {
+    transform: translateX(0);
+}
+
+
+#aians {
+    width: 98%;
+    height: 50%;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(64, 64, 72);
+    padding: 0.3em;
+    color: gray;
+    font-weight: lighter;
+}
+
+
+#clearBtn {
+    width: 30%;
+    height: 15%;
+    border: none;
+    background-color: rgb(64, 64, 72);
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+}
+
+#clearBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+#note {
+    width: 98%;
+    height: 15%;
+    color: red;
+    border-radius: 0.5em;
+    background-color: rgb(64, 64, 72);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Media Query */
+@media (max-width:430px) and (max-height:932px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #sec1 {
+        width: 100%;
+        height: 10%;
+        background-color: black;
+    }
+
+    #sec2 {
+        width: 100%;
+        height: 90%;
+        background-color: blanchedalmond;
+    }
+}

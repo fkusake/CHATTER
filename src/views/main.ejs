@@ -1,0 +1,66 @@
+<main>
+    <section id="sec1" class="mainSecs">
+        <div class="sec1Div">
+            <img src="Chatter.png" alt="">
+        </div>
+    </section>
+    <section id="sec2" class="mainSecs">
+        <div class="sec2divs" id="sec2chatdiv">
+            <div class="chatDivs" id="chatHeader">
+                <Strong>CHATS</Strong>
+                <p id="typPara"></p>
+            </div>
+            <div class="chatDivs" id="chatbody">
+            </div>
+            <div class="chatDivs" id="chatfooter">
+                <form id="textform">
+                    <input type="text" name="userName" id="userName" hidden value="<%=locals.userName%>">
+                    <input type="text" name="userImage" id="userImage" hidden value="<%=locals.userImage%>">
+                    <input type="text" name="text" id="text" placeholder="Enter message">
+                    <button type="submit" id="textbtn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="sec3" class="mainSecs">
+        <div class="sec3divs" id="sec3infodiv">
+            <div class="servicediv" id="usercountdiv">
+                <div id="countdiv">
+                    <strong>CONNECTED</strong>
+                </div>
+                <div id="onlineusers">
+                    <% if(users.length> 0){ %>
+                        <%users.forEach(user=>{%>
+                            <% if(user!=locals.userName){ %>
+                                <div class="usersin" id="<%=user%>">
+                                    <strong>
+                                        <%=user%>
+                                    </Strong>
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                </div>
+                                <% } %>
+                                    <%})%>
+                                        <% } %>
+                </div>
+            </div>
+            <div class="servicediv" id="Aidiv">
+                <div id="subAidiv">
+                    <div id="aioutputdiv">
+                        <div id="aians">
+                          "Thinking.....!!!!"
+                        </div>
+                        <button type="button" id="clearBtn" disabled>Generating...</button>
+                        <span id="note">Note : clicking Clear Doesn't restore data</span>
+                    </div>
+                    <form id="AIForm">
+                        <textarea name="Question" placeholder="Hey <%=locals.userName%> Ask Something"
+                            id="aitextArea"></textarea>
+                        <button type="submit" id="aiAsk">Ask</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="JSpageformain.js"></script>
