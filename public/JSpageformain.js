@@ -1,4 +1,4 @@
-const socket = io.connect("http://localhost:3000");
+const socket = io.connect(window.location.origin);
 
 // On new message config :
 const inputTag = document.getElementById("text");
@@ -162,7 +162,7 @@ document.getElementById("AIForm").addEventListener("submit", async (event) => {
         const formData = new FormData(event.target);
         document.getElementById("aioutputdiv").classList.add("show");
         document.getElementById("aitextArea").value = "";
-        const response = await fetch("http://localhost:3000/AI", {
+        const response = await fetch(`${window.location.origin}/AI`, {
             method: "POST",
             body: formData
         });
