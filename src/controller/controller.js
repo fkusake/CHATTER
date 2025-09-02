@@ -10,8 +10,16 @@ export default class ChatController {
 
     //FILE- HANDLE CONTROLLER:
     static fileHandle(req, res) {
-        return res.status(201).redirect(`/main?userName=${req.body.user}&userImage=${req.file.filename}`);
+        if(onlineUsers.has(req.body.user)){
+            req.body.user = req.body.user +"-"+Math.floor(Math.random() * 100) + 1;
+        }
+        if(req.file){
+            return res.status(201).redirect(`/main?userName=${req.body.user.trim()}&userImage=${req.file.filename}`);
+        }else{
+            return res.status(201).redirect(`/main?userName=${req.body.user.trim()}&userImage=9440461.jpg`);
+        }
     }
+
 
     //MAIN PAGE CONTROLLER:
     static mainPage(req, res) {
